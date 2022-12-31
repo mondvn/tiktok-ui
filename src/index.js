@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import App from '~/App';
 import reportWebVitals from './reportWebVitals';
+import GlobalStytes from '~/components/GlobalStytes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <GlobalStytes>
+      <App />
+    </GlobalStytes>
   </React.StrictMode>
 );
 
