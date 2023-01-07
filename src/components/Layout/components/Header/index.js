@@ -23,7 +23,9 @@ import styles from './Header.module.scss'
 import images from '~/assets/images'
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
-import { faCircleQuestion, faKeyboard, faMessage, faMoon, faPaperPlane, faUser } from '@fortawesome/free-regular-svg-icons';
+import { faCircleQuestion, faKeyboard, faMoon, faUser } from '@fortawesome/free-regular-svg-icons';
+import { InboxIcon, MessageIcon, PlusIcon, SearchIcon } from '~/components/Icon';
+import Image from '~/components/Image'
 
 const cx = classNames.bind(styles)
 
@@ -133,22 +135,22 @@ function Header() {
             </button>
             <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
             <button className={cx('search-btn')}>
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
+              <SearchIcon />
             </button>
           </div>
         </HeadlessTippy>
         <div className={cx('action')}>
           {currentUser ? (
             <>
-              <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>Upload</Button>
+              <Button text leftIcon={<PlusIcon />}>Upload</Button>
               <Tippy content="Messages" placement='bottom' delay={[0, 200]}>
                 <button className={cx('action-btn')}>
-                  <FontAwesomeIcon icon={faPaperPlane} />
+                  <MessageIcon />
                 </button>
               </Tippy>
               <Tippy content="Inbox" placement='bottom' delay={[0, 200]}>
                 <button className={cx('action-btn')}>
-                  <FontAwesomeIcon icon={faMessage} />
+                  <InboxIcon />
                 </button>
               </Tippy>
             </>
@@ -162,7 +164,7 @@ function Header() {
           )}
           <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
             {currentUser ? (
-              <img
+              <Image
                 className={cx('user-avatar')}
                 src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/d2f44d89ccbf5a13cbfdffd0b663057b~c5_300x300.webp?x-expires=1673074800&x-signature=fe3y8wbNmuGb3u48M5NXM%2BTfvSg%3D"
                 alt="Nguyễn Văn A" />

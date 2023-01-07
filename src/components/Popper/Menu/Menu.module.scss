@@ -13,10 +13,11 @@
 
 // Menu item
 .menu-item {
+  font-weight: 600;
   width: 100%;
   padding: 9px 16px;
-  justify-content: flex-start;
   border-radius: 0px;
+  justify-content: flex-start;
   &.separate {
     border-top: 1px solid rgba(22, 24, 35, 0.12);
   }

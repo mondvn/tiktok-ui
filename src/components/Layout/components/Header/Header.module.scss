@@ -21,6 +21,7 @@
 }
 
 .logo {
+  display: flex;
 }
 
 .search,
@@ -50,8 +51,10 @@
   input {
     flex: 1;
     height: 100%;
-    color: var(--black);
+    color: var(--text-color);
     font-size: 1.6rem;
+    font-family: 'ProximaNova', sans-serif;
+    font-weight: 400;
     caret-color: var(--primary);
     background-color: transparent;
   }
@@ -108,6 +111,7 @@
 }
 
 .action-btn {
+  display: flex;
   font-size: 2.2rem;
   color: rgba(22, 24, 35, 1);
   background: transparent;
