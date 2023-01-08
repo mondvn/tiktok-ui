@@ -6,11 +6,11 @@ import GlobalStytes from '~/components/GlobalStytes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <GlobalStytes>
-      <App />
-    </GlobalStytes>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <GlobalStytes>
+    <App />
+  </GlobalStytes>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
