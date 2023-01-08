@@ -10,7 +10,7 @@ import styles from "./Menu.module.scss"
 const defaultfn = () => { }
 
 const cx = classNames.bind(styles)
-function Menu({ children, items = [], onChange = defaultfn }) {
+function Menu({ children, items = [], hideOnClick = false, onChange = defaultfn }) {
   const [history, setHistory] = useState([{ data: items }])
   const current = history[history.length - 1]
 
@@ -40,6 +40,7 @@ function Menu({ children, items = [], onChange = defaultfn }) {
       delay={[0, 800]}
       offset={[12, 10]}
       interactive
+      hideOnClick={hideOnClick}
       placement='bottom-end'
       onHide={() => setHistory(prev => prev.slice(0, 1))}
       render={attrs => (

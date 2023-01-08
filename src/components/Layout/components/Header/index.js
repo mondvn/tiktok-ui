@@ -1,9 +1,9 @@
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCameraRetro,
   faEarthAsia,
-  faEllipsisVertical,
   faGear,
   faPlus,
   faSignOut
@@ -19,6 +19,7 @@ import { faCircleQuestion, faKeyboard, faMoon, faUser } from '@fortawesome/free-
 import { InboxIcon, MenuIcon, MessageIcon, PlusIcon } from '~/components/Icon';
 import Image from '~/components/Image'
 import Search from '../Search';
+import routesConfig from '~/config/routes'
 
 const cx = classNames.bind(styles)
 
@@ -97,9 +98,7 @@ function Header() {
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
-        <div className={cx('logo')}>
-          <img src={images.logo} alt="TikTok Logo" />
-        </div>
+        <Link className={cx('logo-link')} to={routesConfig.home}><img src={images.logo} alt="TikTok Logo" /></Link>
 
         <Search />
 
