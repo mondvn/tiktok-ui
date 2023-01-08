@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   font-family: 'ProximaNova', sans-serif;
   min-width: 100px;
   padding: 6px 16px;
@@ -12,9 +12,10 @@
   background-color: var(--white);
   border: 1px solid transparent;
   user-select: none;
+  margin-right: 8px;
 
   + .wrapper {
-    margin-left: 16px;
+    margin-left: 8px;
   }
   &:hover {
     cursor: pointer;
@@ -32,8 +33,10 @@
 
 .icon {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20px;
-  text-align: center;
+  height: 20px;
 }
 
 // Button types

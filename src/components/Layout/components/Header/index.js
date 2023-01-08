@@ -16,7 +16,7 @@ import styles from './Header.module.scss'
 import images from '~/assets/images'
 import Menu from '~/components/Popper/Menu';
 import { faCircleQuestion, faKeyboard, faMoon, faUser } from '@fortawesome/free-regular-svg-icons';
-import { InboxIcon, MessageIcon, PlusIcon } from '~/components/Icon';
+import { InboxIcon, MenuIcon, MessageIcon, PlusIcon } from '~/components/Icon';
 import Image from '~/components/Image'
 import Search from '../Search';
 
@@ -107,21 +107,22 @@ function Header() {
           {currentUser ? (
             <>
               <Button text leftIcon={<PlusIcon />}>Upload</Button>
-              <Tippy content="Messages" placement='bottom' delay={[0, 200]}>
+              <Tippy content="Messages" placement='bottom' delay={[0, 50]}>
                 <button className={cx('action-btn')}>
                   <MessageIcon />
                 </button>
               </Tippy>
-              <Tippy content="Inbox" placement='bottom' delay={[0, 200]}>
+              <Tippy content="Inbox" placement='bottom' delay={[0, 50]}>
                 <button className={cx('action-btn')}>
                   <InboxIcon />
+                  <span className={cx('badge')}>12</span>
                 </button>
               </Tippy>
             </>
           ) : (
             <>
               <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>Upload</Button>
-              <Button primary>Login</Button>
+              <Button primary>Log in</Button>
 
 
             </>
@@ -134,7 +135,7 @@ function Header() {
                 alt="Nguyễn Văn A" />
             ) : (
               <button className={cx('more-btn')}>
-                <FontAwesomeIcon icon={faEllipsisVertical} />
+                <MenuIcon />
               </button>
             )}
           </Menu>
