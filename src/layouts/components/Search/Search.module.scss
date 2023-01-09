@@ -25,10 +25,11 @@
   input {
     flex: 1;
     height: 100%;
-    color: var(--text-color);
+    padding-right: 40px;
     font-size: 1.6rem;
     font-family: var(--font-family);
     font-weight: 400;
+    color: var(--text-color);
     caret-color: var(--primary);
     background-color: transparent;
   }
